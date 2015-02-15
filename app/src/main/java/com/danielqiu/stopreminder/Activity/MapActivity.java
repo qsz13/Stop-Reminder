@@ -2,8 +2,6 @@ package com.danielqiu.stopreminder.Activity;
 
 import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.database.Cursor;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
@@ -16,8 +14,8 @@ import com.danielqiu.stopreminder.R;
 public class MapActivity extends Activity {
 
     private WebView mapWebView;
-    private String stationStart = "";
-    private String stationDes = "";
+    private String stationStartID = "";
+    private String stationDesID = "";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,9 +34,9 @@ public class MapActivity extends Activity {
         mapWebView = (WebView) findViewById(R.id.webView);
         WebSettings webSettings = mapWebView.getSettings();
         webSettings.setJavaScriptEnabled(true);
-        mapWebView.getSettings().setBuiltInZoomControls(true);
-        mapWebView.getSettings().setDisplayZoomControls(false);
-        mapWebView.getSettings().setUseWideViewPort(true);
+        webSettings.setBuiltInZoomControls(true);
+        webSettings.setDisplayZoomControls(false);
+        webSettings.setUseWideViewPort(true);
         mapWebView.setInitialScale(50);
         mapWebView.loadUrl("file:///android_asset/metromap/route_map.htm");
         MapWebViewClient webViewClient = new MapWebViewClient();
@@ -46,12 +44,12 @@ public class MapActivity extends Activity {
         mapWebView.setWebViewClient(webViewClient);
     }
 
-    public void setStationStart(String stationStart) {
-        this.stationStart = stationStart;
+    public void setStationStartID(String stationStartID) {
+        this.stationStartID = stationStartID;
     }
 
-    public void setStationDes(String stationDes) {
-        this.stationDes = stationDes;
+    public void setStationDesID(String stationDesID) {
+        this.stationDesID = stationDesID;
     }
 
 

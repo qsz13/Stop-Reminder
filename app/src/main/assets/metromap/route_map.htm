@@ -663,7 +663,7 @@ div {background-repeat:no-repeat}
 	<img id="diag_bg" src="menuBar.png"  style="z-index:1; " />
 </div>
 
-<div style="top:0;left:0; display:none; z-index:7" id="menutwo" onclick="staInfoTwo()";>
+<div style="top:0;left:0; display:none; z-index:7" id="menutwo" onclick="staInfoTwo()"s>
 	<img src="sorig_.png" width="35" height="35" style="z-index:2; position:absolute; left: 7px; top: 4px; width: 30px; height: 30px;" />
 	<span id="stat" style="color:#fff; position:absolute; z-index:2;left:14px; top:10px;">起</span>
 	<span class="nametwo" id="station_name_two" style="color:#fff; position:absolute;left:38px; top:10px; z-index:2; ">zhangc</span>
@@ -672,7 +672,7 @@ div {background-repeat:no-repeat}
 </div>
 <!-- <div style="top:0;left:0;display:none; width:150px; height:150px; position:absolute;" id="showMyLocation" > </div> -->
 
-<div style="top:0;left:0;display:none; z-index:5" id="pageOverlay" onclick="hideDiv()";></div>
+<div style="top:0;left:0;display:none; z-index:5" id="pageOverlay" onclick="hideDiv()"></div>
 <iframe id="hpl" name="hlp" style="display:none" src="about:blank"></iframe>
 
 
@@ -806,7 +806,7 @@ function selectStation(sid,obj,left,top)
 				num = strname.length;
 			}
 			_name.innerHTML = obj.innerHTML;
-			window.hlp.location.href='selectStationStart-'+sid;
+			window.hlp.location.href='selectStationDes-'+sid;
 			if(menu_stat != "not") {
 				showMenu(sid,left,top,num);
 			}
@@ -827,7 +827,7 @@ function selectStation(sid,obj,left,top)
 				numtwo = strnametwo.length;
 			}
 			_nametwo.innerHTML = obj.innerHTML;
-			window.hlp.location.href='selectStationDes-'+sid;
+			window.hlp.location.href='selectStationStart-'+sid;
 			if(menu_stat != "not") {
 				showMenuTwo(sid,left,top,numtwo);
 			}
