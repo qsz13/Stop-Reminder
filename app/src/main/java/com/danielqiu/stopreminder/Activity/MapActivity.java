@@ -10,7 +10,6 @@ import com.danielqiu.stopreminder.R;
 //import com.danielqiu.stopreminder.Utils.DBAdapter;
 //import com.danielqiu.stopreminder.Utils.StationManager;
 
-
 public class MapActivity extends Activity {
 
     private WebView mapWebView;
@@ -22,8 +21,6 @@ public class MapActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initMapWebView();
-
-
 
     }
 
