@@ -22,13 +22,13 @@ public class MapWebViewClient extends WebViewClient {
         if (url.contains("selectStationStart-"))
         {
             mapActivity.setStationStartID(url.split("-")[1]);
-            Log.i("metro", "start:" + url.split("-")[1]);
+            Log.w("metro", "start:" + url.split("-")[1]);
             return true;
         }
         else if(url.contains("selectStationDes-"))
         {
             mapActivity.setStationDesID(url.split("-")[1]);
-            Log.i("metro", "end:"+ url.split("-")[1]);
+            Log.w("metro", "end:"+ url.split("-")[1]);
             return true;
         }
 
