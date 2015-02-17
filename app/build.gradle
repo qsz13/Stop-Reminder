@@ -26,7 +26,6 @@ dependencies {
 }
 
 dependencies {
-    compile 'com.readystatesoftware.sqliteasset:sqliteassethelper:+'
     compile files('libs/ormlite-core-4.48.jar')
     compile files('libs/ormlite-android-4.48.jar')
     compile files('libs/jgrapht-core-0.9.0.jar')
