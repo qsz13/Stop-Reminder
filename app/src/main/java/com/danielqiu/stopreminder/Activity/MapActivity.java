@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
+import com.danielqiu.stopreminder.App;
 import com.danielqiu.stopreminder.R;
 //import com.danielqiu.stopreminder.Utils.DBAdapter;
 //import com.danielqiu.stopreminder.Utils.StationManager;
@@ -15,6 +16,8 @@ public class MapActivity extends Activity {
     private WebView mapWebView;
     private String stationStartID = "";
     private String stationDesID = "";
+
+    App.getDatabase();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

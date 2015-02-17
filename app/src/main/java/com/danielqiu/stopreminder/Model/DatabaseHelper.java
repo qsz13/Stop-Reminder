@@ -23,7 +23,8 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
 
     private static final int DATABASE_VERSION = 1;
 
-    private Dao<Station, Integer> idDao = null;
+    private Dao<Station, Integer> stationDao = null;
+    private Dao<Station, Integer> lineDao = null;
     private RuntimeExceptionDao<Station, Integer> idRuntimeExceptionDao = null;
 
     public DatabaseHelper(Context context) {
@@ -57,14 +58,17 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
         }
     }
 
+
     public Dao<Station, Integer> getDao() throws SQLException {
-        if (idDao == null) {
-            idDao = getDao(Station.class);
+        if (stationDao == null) {
+            stationDao = getDao(Station.class);
         }
-        return idDao;
+        return stationDao;
+
     }
 
-    public RuntimeExceptionDao<Station, Integer> getIdDao() {
+
+    public RuntimeExceptionDao<Station, Integer> getStationDao() {
         if (idRuntimeExceptionDao == null) {
             idRuntimeExceptionDao = getRuntimeExceptionDao(Station.class);
         }
@@ -73,7 +77,7 @@ public class DatabaseHelper extends OrmLiteSqliteOpenHelper {
     @Override
     public void close() {
         super.close();
-        idDao = null;
+        stationDao = null;
         idRuntimeExceptionDao = null;
     }
 }
