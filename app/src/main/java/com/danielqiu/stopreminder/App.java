@@ -20,6 +20,7 @@ public class App extends Application {
         super.onCreate();
         App.context = getApplicationContext();
         databaseHelper = OpenHelperManager.getHelper(context,DatabaseHelper.class);
+
     }
 
     public static Context getAppContext() {return App.context;}

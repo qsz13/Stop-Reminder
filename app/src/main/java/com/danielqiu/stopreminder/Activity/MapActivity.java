@@ -17,14 +17,16 @@ public class MapActivity extends Activity {
     private String stationStartID = "";
     private String stationDesID = "";
 
-    App.getDatabase();
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initMapWebView();
-
+        App.getDatabase();
+        Station station1 = stationDao.queryForId("164");
+        System.out.println("Station:" + station1.getName());
     }
 
 
