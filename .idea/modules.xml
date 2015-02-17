@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/Stop-Reminder.iml" filepath="$PROJECT_DIR$/Stop-Reminder.iml" />
       <module fileurl="file://$PROJECT_DIR$/StopReminder.iml" filepath="$PROJECT_DIR$/StopReminder.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
 </project>

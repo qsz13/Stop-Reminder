@@ -10,7 +10,7 @@ import com.j256.ormlite.table.DatabaseTable;
 @DatabaseTable(tableName = "line")
 public class Line {
 
-    @DatabaseField
+    @DatabaseField(id = true)
     private int id;
     @DatabaseField
     private String name;

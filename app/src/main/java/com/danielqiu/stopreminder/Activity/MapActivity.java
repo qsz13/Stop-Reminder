@@ -3,13 +3,16 @@ package com.danielqiu.stopreminder.Activity;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.os.Bundle;
+import android.util.Log;
 import android.webkit.WebSettings;
 import android.webkit.WebView;
 
 import com.danielqiu.stopreminder.App;
+import com.danielqiu.stopreminder.Model.DatabaseHelper;
+import com.danielqiu.stopreminder.Model.Station;
 import com.danielqiu.stopreminder.R;
-//import com.danielqiu.stopreminder.Utils.DBAdapter;
-//import com.danielqiu.stopreminder.Utils.StationManager;
+import com.j256.ormlite.dao.Dao;
+
 
 public class MapActivity extends Activity {
 
@@ -24,9 +27,11 @@ public class MapActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initMapWebView();
-        App.getDatabase();
-        Station station1 = stationDao.queryForId("164");
-        System.out.println("Station:" + station1.getName());
+
+        Station station =  App.getDatabase().getStationDao().queryForId(164);
+
+
+        Log.i("db",station.getName());
     }
 
 
