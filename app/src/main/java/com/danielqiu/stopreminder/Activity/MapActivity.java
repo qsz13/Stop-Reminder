@@ -29,7 +29,10 @@ public class MapActivity extends Activity {
         initMapWebView();
 
         Station station =  App.getDatabase().getStationDao().queryForId(164);
-
+        if(station==null)
+        {
+            Log.i("","null");
+        }
 
         Log.i("db",station.getName());
     }
