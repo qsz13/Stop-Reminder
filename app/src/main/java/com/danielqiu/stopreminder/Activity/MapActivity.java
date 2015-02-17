@@ -13,6 +13,8 @@ import com.danielqiu.stopreminder.Model.Station;
 import com.danielqiu.stopreminder.R;
 import com.j256.ormlite.dao.Dao;
 
+import java.sql.SQLException;
+
 
 public class MapActivity extends Activity {
 
@@ -28,7 +30,13 @@ public class MapActivity extends Activity {
         setContentView(R.layout.activity_main);
         initMapWebView();
 
-        Station station =  App.getDatabase().getStationDao().queryForId(164);
+        Station station = null;
+        try {
+            station = App.getDatabase().getStationDao().queryForId(164);
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
         if(station==null)
         {
             Log.i("","null");

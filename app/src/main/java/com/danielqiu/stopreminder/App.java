@@ -19,7 +19,7 @@ public class App extends Application {
     public void onCreate() {
         super.onCreate();
         App.context = getApplicationContext();
-        databaseHelper = OpenHelperManager.getHelper(context,DatabaseHelper.class);
+        databaseHelper = new DatabaseHelper(context);
 
     }
 
